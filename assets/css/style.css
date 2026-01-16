@@ -1,0 +1,515 @@
+/* =====================================================
+   BASE / RESET
+===================================================== */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0f0f0f;
+  color: #f5f5f5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =====================================================
+   TOPO / HEADER
+===================================================== */
+
+.topo {
+  background: #1c1c1c;
+  padding: 15px;
+}
+
+.topo h1 {
+  color: #ff6a00;
+  margin: 0;
+}
+
+.topo nav {
+  margin-top: 10px;
+}
+
+.topo nav a {
+  margin-right: 15px;
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   LAYOUT
+===================================================== */
+
+.container {
+  padding: 20px;
+}
+
+
+/* =====================================================
+   DESTAQUE
+===================================================== */
+
+.destaque {
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+/* ===== PERFIL ===== */
+
+.perfil-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.perfil-avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #0f0f0f;
+}
+
+.perfil-info h2 {
+  margin: 0;
+  color: #ff6a00;
+}
+
+.perfil-bio {
+  font-size: 13px;
+  color: #aaa;
+  margin: 10px 0;
+}
+
+.perfil-acoes {
+  display: flex;
+  gap: 10px;
+}
+
+.perfil-acoes button {
+  padding: 8px 12px;
+  background: #0f0f0f;
+  color: #f5f5f5;
+  border: 1px solid #333;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.perfil-acoes button:hover {
+  border-color: #ff6a00;
+}
+
+
+
+/* ===== OUTDOOR / ANUNCIANTES ===== */
+
+.outdoor {
+  background: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.outdoor h3 {
+  color: #ff6a00;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+/* Janela visível */
+.outdoor-viewport {
+  height: 260px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Trilha animada */
+.outdoor-track {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: scroll-up 18s linear infinite;
+}
+
+/* Pausa ao passar o mouse */
+.outdoor-viewport:hover .outdoor-track {
+  animation-play-state: paused;
+}
+
+.outdoor-item {
+  background: #0f0f0f;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.outdoor-item img {
+  width: 100%;
+  display: block;
+}
+
+/* Animação */
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+
+/* =====================================================
+   BLOCOS / LISTAGENS
+===================================================== */
+
+.bloco h3 {
+  margin-bottom: 15px;
+  color: #ff6a00;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+.grid li {
+  background: #1c1c1c;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.grid img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.grid span {
+  display: block;
+  padding: 8px;
+  font-size: 13px;
+}
+
+/* ===== FORMULÁRIOS ===== */
+
+.formulario {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.formulario label {
+  font-size: 13px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.formulario input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  background: #0f0f0f;
+  color: #f5f5f5;
+}
+
+.formulario button {
+  margin-top: 10px;
+  padding: 12px;
+  background: #ff6a00;
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.formulario button:hover {
+  opacity: 0.9;
+}
+
+/* ===== PERFIL (estilo YouTube) ===== */
+
+.perfil-header {
+  margin-bottom: 30px;
+}
+
+/* Banner */
+.perfil-banner {
+  width: 100%;
+  height: 200px;
+  background: #1c1c1c;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.perfil-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Área do canal */
+.perfil-canal {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin-top: -50px; /* sobreposição do avatar */
+  background: #1c1c1c;
+  border-radius: 10px;
+}
+
+/* Avatar */
+.perfil-avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #1c1c1c;
+  object-fit: cover;
+  background: #0f0f0f;
+}
+
+/* Info */
+.perfil-info h2 {
+  margin: 0;
+  color: #ff6a00;
+}
+
+.perfil-bio {
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+/* Ações */
+.perfil-acoes {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+}
+
+.perfil-acoes button {
+  padding: 8px 14px;
+  background: #0f0f0f;
+  color: #f5f5f5;
+  border: 1px solid #333;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.perfil-acoes button:hover {
+  border-color: #ff6a00;
+}
+
+/* ===== CABEÇALHO DA COMUNIDADE ===== */
+
+.comunidade-header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.comunidade-info h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #ff6a00;
+}
+
+.comunidade-info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #aaa;
+  line-height: 1.4;
+}
+
+/* Menu da comunidade */
+.menu-comunidade {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.menu-comunidade a {
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background: #0f0f0f;
+  color: #f5f5f5;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.menu-comunidade a:hover {
+  background: #ff6a00;
+  color: #0f0f0f;
+}
+
+/* Ação sensível */
+.menu-comunidade .sair {
+  background: transparent;
+  border: 1px solid #444;
+  color: #aaa;
+}
+
+.menu-comunidade .sair:hover {
+  background: #aa3333;
+  border-color: #aa3333;
+  color: #fff;
+}
+
+
+/* ===== FEED DE COMUNIDADE (orgânico) ===== */
+
+.feed-comunidade {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Mensagem */
+.mensagem {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+/* Avatar */
+.avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Conteúdo */
+.mensagem-conteudo {
+  background: #1c1c1c;
+  padding: 12px;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+.autor {
+  font-size: 13px;
+  font-weight: bold;
+  color: #ff6a00;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.mensagem-conteudo p {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+/* Imagem integrada */
+.mensagem-img {
+  width: 100%;
+  border-radius: 8px;
+  margin: 10px 0;
+}
+
+/* Ações */
+.mensagem-acoes {
+  display: flex;
+  gap: 15px;
+  font-size: 12px;
+}
+
+.mensagem-acoes button {
+  background: none;
+  border: none;
+  color: #aaa;
+  cursor: pointer;
+}
+
+.mensagem-acoes button:hover {
+  color: #ff6a00;
+}
+
+/* Respostas */
+.resposta {
+  margin-top: 10px;
+  padding-left: 10px;
+  border-left: 2px solid #333;
+}
+
+.resposta p {
+  font-size: 13px;
+  color: #ccc;
+}
+
+/* Campo de envio */
+.envio {
+  display: flex;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.envio input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 20px;
+  border: none;
+  background: #1c1c1c;
+  color: #f5f5f5;
+}
+
+.envio button {
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: none;
+  background: #ff6a00;
+  color: #000;
+  cursor: pointer;
+}
+
+
+/* ===== ANIMAÇÃO DE NOVA MENSAGEM ===== */
+
+@keyframes mensagemEntrando {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mensagem {
+  animation: mensagemEntrando 0.25s ease-out;
+}
+
+
+
+/* =====================================================
+   RODAPÉ
+===================================================== */
+
+.rodape {
+  background: #1c1c1c;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+}
